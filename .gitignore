@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+*/node_modules/
+*/*/node_modules/
+
+# Build artifacts
+dist/
+*/dist/
+*/*/dist/
+build/
+*/build/
+
+# Python cache & temporary files
+__pycache__/
+*/__pycache__/
+*/*/__pycache__/
+*/*/*/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Testing & Cache
+.pytest_cache/
+*/.pytest_cache/
+*/*/.pytest_cache/
+.coverage
+htmlcov/
+.playwright/
+test-results/
+
+# Environment files
+.env
+.env.local
+!.env.example
+
+# IDE & OS metadata
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db

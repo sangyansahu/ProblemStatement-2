@@ -1,0 +1,84 @@
+{
+  "id": "aicte-realm",
+  "realm": "aicte-realm",
+  "displayName": "AICTE APAAR Identity Realm",
+  "enabled": true,
+  "sslRequired": "external",
+  "registrationAllowed": false,
+  "roles": {
+    "realm": [
+      { "name": "aicte_admin", "description": "National AICTE Administrator" },
+      { "name": "institution_admin", "description": "Institution Administrator" },
+      { "name": "institution_operator", "description": "Institution Data Operator" },
+      { "name": "verifier", "description": "Credential Verifier" },
+      { "name": "auditor", "description": "Security Compliance Auditor" }
+    ]
+  },
+  "clients": [
+    {
+      "clientId": "aicte-backend",
+      "enabled": true,
+      "publicClient": false,
+      "directAccessGrantsEnabled": true,
+      "serviceAccountsEnabled": true
+    },
+    {
+      "clientId": "aicte-frontend",
+      "enabled": true,
+      "publicClient": true,
+      "directAccessGrantsEnabled": true,
+      "standardFlowEnabled": true,
+      "redirectUris": ["http://localhost:5173/*"],
+      "webOrigins": ["http://localhost:5173"]
+    }
+  ],
+  "users": [
+    {
+      "username": "aicte_admin",
+      "enabled": true,
+      "email": "aicte_admin@aicte.gov.in",
+      "firstName": "Dr. V. K.",
+      "lastName": "Sharma",
+      "credentials": [{ "type": "password", "value": "password123", "temporary": false }],
+      "realmRoles": ["aicte_admin"]
+    },
+    {
+      "username": "inst_admin",
+      "enabled": true,
+      "email": "director@diaet.edu.in",
+      "firstName": "Rajesh",
+      "lastName": "Kumar",
+      "credentials": [{ "type": "password", "value": "password123", "temporary": false }],
+      "realmRoles": ["institution_admin"],
+      "attributes": { "aicte_code": ["AICTE-1-001"] }
+    },
+    {
+      "username": "inst_operator",
+      "enabled": true,
+      "email": "registrar@diaet.edu.in",
+      "firstName": "Sunita",
+      "lastName": "Verma",
+      "credentials": [{ "type": "password", "value": "password123", "temporary": false }],
+      "realmRoles": ["institution_operator"],
+      "attributes": { "aicte_code": ["AICTE-1-001"] }
+    },
+    {
+      "username": "verifier",
+      "enabled": true,
+      "email": "verifier@credential.gov.in",
+      "firstName": "Amit",
+      "lastName": "Saxena",
+      "credentials": [{ "type": "password", "value": "password123", "temporary": false }],
+      "realmRoles": ["verifier"]
+    },
+    {
+      "username": "auditor",
+      "enabled": true,
+      "email": "auditor@aicte.gov.in",
+      "firstName": "P. N.",
+      "lastName": "Murthy",
+      "credentials": [{ "type": "password", "value": "password123", "temporary": false }],
+      "realmRoles": ["auditor"]
+    }
+  ]
+}

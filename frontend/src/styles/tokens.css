@@ -1,0 +1,68 @@
+:root {
+  /* Main theme */
+  --color-canvas: #F4F3EE;
+  --color-surface: #FFFEFA;
+  --color-text-primary: #202A2D;
+  --color-text-secondary: #475551;
+  --color-border: #DCDED8;
+  --color-border-strong: #C8CEC6;
+
+  /* Navigation */
+  --color-sidebar: #203431;
+  --color-nav-muted: #A9B8B1;
+
+  --color-primary: #2B665B;
+  --color-primary-hover: #1F5148;
+  --color-primary-soft: #E1EEEA;
+
+  --color-bronze: #D8A36C;
+
+  /* Status colours */
+  --color-critical: #A84231;
+  --color-critical-bg: #F7E9E5;
+
+  --color-caution: #8C6319;
+  --color-caution-bg: #F5EFDF;
+
+  --color-success: #2D6B4D;
+  --color-success-bg: #E4EFE7;
+
+  /* Additional interface colours */
+  --color-search-bg: #FAF9F5;
+  --color-table-header: #F8F8F3;
+  --color-nav-hover: rgba(255, 255, 255, 0.055);
+  --color-nav-active: rgba(237, 244, 236, 0.105);
+  --color-progress: #548478;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-text-primary);
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+
+  code, pre, .font-mono {
+    font-family: 'IBM Plex Mono', monospace;
+  }
+
+  /* Custom subtle scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #C8CEC6;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #A9B8B1;
+  }
+}
